@@ -1,0 +1,71 @@
+/* Additional styles for the LLM-Picbreeder tutorial */
+
+/* Animation for the prompt variations */
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.prompt-content p {
+    animation: fadeInOut 4s infinite;
+}
+
+.prompt-content p:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.prompt-content p:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.prompt-content p:nth-child(4) {
+    animation-delay: 3s;
+}
+
+/* Interactive elements */
+.interactive-element {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+    background: #e9f7fe;
+    margin: 10px 0;
+}
+
+.interactive-element:hover {
+    background: #d1ecf1;
+    transform: translateX(5px);
+}
+
+/* Rating stars animation */
+.star-rating:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* Story box with scroll */
+.story-content {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/* Button pulse animation */
+.btn-next {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+    50% { box-shadow: 0 4px 25px rgba(75, 108, 183, 0.6); }
+    100% { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); }
+}
+
+/* Progress bar animation */
+.progress-bar {
+    animation: progressAnimation 0.5s ease;
+}
+
+@keyframes progressAnimation {
+    from { width: 0%; }
+}

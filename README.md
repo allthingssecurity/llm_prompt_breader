@@ -1,80 +1,38 @@
-# LLM-Picbreeder: Collaborative Evolution of LLM Prompts and Outputs
+# LLM-Picbreeder: Collaborative Prompt Evolution
 
-This project applies the collaborative evolutionary concepts from the Picbreeder paper to applications built on top of pretrained LLMs like GPT-4. Instead of evolving images, we evolve prompts and their outputs collaboratively.
+## Interactive Tutorial
 
-## Concept
+This is an interactive tutorial demonstrating the LLM-Picbreeder concept - applying collaborative evolutionary algorithms from Picbreeder to evolve prompts for Large Language Models.
 
-The Picbreeder paper demonstrated how collaborative interactive evolution (CIE) can overcome the limitations of single-user interactive evolution by allowing multiple users to branch from interesting artifacts and continue evolving them. In the context of LLM applications, we can apply this concept by:
+[View the Interactive Tutorial](https://allthingssecurity.github.io/llm_prompt_breader/)
 
-1. **Evolving Prompts**: Users start with initial prompts and iteratively refine them based on the quality of outputs
-2. **Branching Prompts**: Users can branch from existing prompts that produced interesting outputs
-3. **Collaborative Refinement**: Multiple users can contribute to evolving better prompts for specific tasks
-4. **Community-driven Optimization**: The community collectively discovers better prompt patterns
+## Concept Overview
 
-## Core Components
+LLM-Picbreeder adapts the collaborative evolutionary approach from Picbreeder (which evolved images) to evolve prompts for LLMs like GPT-4. Instead of users selecting better images over generations, users select better prompts that produce more useful outputs from LLMs.
 
-### 1. Prompt Genome Representation
-Instead of CPPNs representing images, we represent prompts as "genomes" that can be:
-- Token sequences with specific structures
-- Template-based prompts with variable parameters
-- Embedding vectors in the LLM's latent space
+## How It Works
 
-### 2. Evolutionary Operators
-- **Mutation**: Small changes to prompts (word substitutions, parameter adjustments)
-- **Crossover**: Combining successful prompts from different lineages
-- **Complexification**: Adding more sophisticated structures or constraints
+1. **Population Generation**: Start with a simple prompt and create variations
+2. **Story Generation**: LLM generates stories for each prompt
+3. **Community Rating**: Users rate the generated stories
+4. **Evolution**: Top-rated prompts "breed" to create the next generation
+5. **Branching**: Users can branch from successful prompts to explore new directions
 
-### 3. Interactive Selection
-Users evaluate LLM outputs and select the best ones, which become parents for the next generation of prompts.
+## Key Benefits
 
-### 4. Branching System
-Users can branch from any published prompt/output pair to explore variations or different directions.
-
-## Implementation Approach
-
-### Backend Architecture
-```
-Prompt Genome DB ↔ Evolution Engine ↔ LLM API ↔ User Interface
-```
-
-### Key Features
-1. **Prompt Lineage Tracking**: Track how prompts evolve over time
-2. **Community Ratings**: Users rate prompt/output quality
-3. **Branching Mechanism**: Continue evolution from interesting results
-4. **Complexity Management**: Allow prompts to grow in sophistication
-5. **Tagging System**: Categorize prompts by domain, task, or style
-
-## Applications
-
-1. **Creative Writing**: Evolving story prompts that produce compelling narratives
-2. **Code Generation**: Finding prompts that generate better code
-3. **Educational Content**: Creating effective learning prompts
-4. **Marketing Copy**: Optimizing promotional text generation
-5. **Research Assistance**: Evolving prompts for better information retrieval
-
-## Benefits Over Traditional Prompt Engineering
-
-1. **Overcomes User Fatigue**: Single users don't need to iterate endlessly
-2. **Leverages Collective Intelligence**: Many users contribute improvements
-3. **Explores Vast Prompt Spaces**: Systematic exploration of prompt possibilities
-4. **Preserves Innovations**: Good prompt variants are saved and can be built upon
-5. **Community Engagement**: Gamification encourages participation
+- **Community Collaboration**: Leverage collective intelligence rather than individual efforts
+- **Overcomes User Fatigue**: No single user needs to iterate endlessly
+- **Preserves Innovations**: Good prompt variants are saved and built upon
+- **Systematic Exploration**: Structured approach to exploring vast prompt design spaces
 
 ## Technical Implementation
 
-The system would implement:
-1. A database to store prompt genomes and their lineages
-2. An evolution engine that applies mutation/crossover operations
-3. Integration with LLM APIs (GPT-4, Claude, etc.)
-4. A web interface for user interaction and selection
-5. Analytics to track evolution patterns and successful lineages
+The full LLM-Picbreeder project includes:
 
-## Future Directions
+- Evolution engine for prompts with mutation and crossover operators
+- Interface to LLM APIs
+- Database for storing prompt lineages
+- Web interface for user interaction
+- Community rating system
 
-1. **Multi-modal Evolution**: Evolve prompts that work with vision-language models
-2. **Task-specific Optimization**: Specialized evolution for different domains
-3. **Automated Fitness Functions**: Combine human ratings with automated quality metrics
-4. **Cross-model Evolution**: Evolve prompts that work well across different LLMs
-5. **Integration with Applications**: Direct integration into LLM-powered applications
-
-This approach leverages the wisdom of crowds to discover better ways of interacting with LLMs, similar to how Picbreeder enabled collaborative discovery of interesting images.
+[View the full project on GitHub](https://github.com/allthingssecurity/llm_prompt_breader)
