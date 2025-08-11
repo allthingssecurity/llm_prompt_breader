@@ -2,6 +2,12 @@
 
 This project applies the collaborative evolutionary concepts from the Picbreeder paper to applications built on top of pretrained LLMs like GPT-4. Instead of evolving images, we evolve prompts and their outputs collaboratively.
 
+## Interactive Tutorial
+
+Check out our [interactive tutorial](https://allthingssecurity.github.io/llm_prompt_breader/) to see how LLM-Picbreeder works in action!
+
+[![Interactive Tutorial](https://img.shields.io/badge/View-Interactive%20Tutorial-blue)](https://allthingssecurity.github.io/llm_prompt_breader/)
+
 ## Concept
 
 The Picbreeder paper demonstrated how collaborative interactive evolution (CIE) can overcome the limitations of single-user interactive evolution by allowing multiple users to branch from interesting artifacts and continue evolving them. In the context of LLM applications, we can apply this concept by:
